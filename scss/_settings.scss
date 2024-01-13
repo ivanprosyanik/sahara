@@ -136,6 +136,13 @@ section {
     gap: 40px;
     opacity: 0;
     transition: opacity .5s ease-in-out;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+
+    @include r($tablet) {
+      flex-direction: column;
+    }
 
     &.show {
       opacity: 1;
@@ -153,6 +160,20 @@ section {
       top: -60%;
       right: 250px;
       z-index: -1;
+
+      @include r($tablet-2) {
+        top: -80%;
+        left: size(280, 200);
+      }
+
+      @include r($tablet) {
+        top: -40%;
+        left: size(280, 250);
+      }
+
+      @include r($phone) {
+        display: none;
+      }
     }
 
     &::before {
@@ -187,13 +208,17 @@ section {
     &::before {
       content: '';
       position: absolute;
-      max-width: 300px;
+      max-width: size(300, 200);
       width: 100%;
       height: 1px;
       background-color: #fff;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+
+      @include r($phone) {
+        right: 10px;
+      }
     }
   }
 
@@ -213,26 +238,55 @@ section {
   }
 
   &__img {
-    max-width: size(500, 400);
-    max-height: size(500, 400);
+    @include r($tablet-2) {
+      max-width: size(500, 200);
+      max-height: size(500, 200);
+    }
+
+    @include r($tablet) {
+      max-width: size(500, 400);
+      max-height: size(500, 400);
+    }
   }
 }
 
 .swiper {
-  overflow: visible;
+  overflow: hidden;
+  overflow-y: visible;
   position: relative;
+  width: 100%;
 
   &-wrapper {
+    max-width: 100%;
     display: flex;
     justify-content: start;
+    width: 100%;
+    margin: 0 auto;
+
+    @include r($phone) {
+      justify-content: stretch;
+    }
   }
 
   &-slide {
     display: flex;
-    justify-content: center;
-    width: 100vw;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
     flex-grow: 1;
     flex-shrink: 0;
+
+    @include r($tablet-2) {
+      flex-direction: column;
+    }
+
+    @include r($tablet) {
+      max-width: 100%;
+      width: 100%;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+
   }
 }
 

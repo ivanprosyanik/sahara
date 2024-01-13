@@ -7,6 +7,16 @@
   overflow: hidden;
   transition: transform 1.5s ease-in-out;
 
+  @include r($tablet) {
+    padding-top: 0;
+    justify-content: center;
+  }
+
+  @include r($phone) {
+    justify-content: flex-end;
+    padding-bottom: 190px;
+  }
+
   &__subtitle {
     font-weight: 700;
     font-size: 60px;
@@ -14,6 +24,14 @@
     text-align: center;
     max-width: 833px;
     margin: 0 auto;
+
+    @include r($tablet-2) {
+      font-size: calc(($index) * 2.7);
+    }
+
+    @include r($phone) {
+      font-size: 25px;
+    }
 
     &.start {
       animation: subtitleRemove 2s ease-in-out forwards;
@@ -29,7 +47,8 @@
 
   &__title {
     font-family: 'Cormorant SemiBold', sans-serif;
-    font-size: 320px;
+    // font-size: size(320, 50);
+    font-size: calc(($index) * 12.7);
     text-align: center;
     text-transform: uppercase;
     background: linear-gradient(180deg, #FFF 8.44%, rgba(255, 255, 255, 0.27) 80.3%);
@@ -38,6 +57,22 @@
     -webkit-text-fill-color: transparent;
     font-weight: 600;
     transition: transform 2s ease-in-out;
+
+    @include r($tablet-2) {
+      font-size: calc(($index) * 11.7);
+    }
+
+    @include r($tablet) {
+      font-size: calc(($index) * 9.7);
+    }
+
+    @include r($phone) {
+      font-size: calc(($index) * 8.7);
+    }
+
+    @include r(400) {
+      font-size: calc(($index) * 6.7);
+    }
   }
 
   &__front {
@@ -48,9 +83,27 @@
     bottom: 0;
     left: 0;
     right: 0;
-    min-height: 484px;
+    min-height: calc(($index) * 18.7);
     width: 100%;
     z-index: 2;
+
+    @include r(1440) {
+      bottom: -150px;
+    }
+
+    @include r($desktop) {
+      min-height: calc(($index) * 26);
+    }
+
+    @include r($tablet-2) {
+      min-height: calc(($index) * 30);
+      bottom: -80px;
+    }
+
+    @include r($phone) {
+      // min-height: calc(($index) * 43);
+      min-height: size(600px, 300);
+    }
 
     &.start {
       animation: frontStart 2s ease-in-out forwards;
@@ -58,7 +111,11 @@
   }
 
   &__btn {
-    position: relative;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateX(-50%);
     display: block;
     margin: 0 auto;
     z-index: 3;
@@ -66,7 +123,7 @@
     text-transform: uppercase;
     font-weight: 700;
     border: 1px solid #fff;
-    padding: 28px 200px;
+    padding: 28px size(200, 120);
   }
 }
 

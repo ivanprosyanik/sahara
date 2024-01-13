@@ -15,6 +15,9 @@ const slideInner = document.querySelectorAll('.slide__inner');
 btnStart.addEventListener('click', () => {
   heroFront.classList.add('start');
   heroSubtitle.classList.add('start');
+  if (window.innerWidth <= 576) {
+    title.style.transform = `translateY(-50px)`;
+  }
 
   setInterval(() => {
     heroSlide.style.transform = `translateX(-100%)`;
@@ -41,4 +44,12 @@ const swiper = new Swiper('.swiper', {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
   },
+  breakpoints: {
+    395: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+  }
 });
+
+console.log(window.innerWidth);
