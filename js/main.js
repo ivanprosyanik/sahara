@@ -15,7 +15,6 @@ const slideInner = document.querySelectorAll('.slide__inner');
 btnStart.addEventListener('click', () => {
   heroFront.classList.add('start');
   heroSubtitle.classList.add('start');
-  title.style.transform = `translateY(-55px)`;
 
   setInterval(() => {
     heroSlide.style.transform = `translateX(-100%)`;

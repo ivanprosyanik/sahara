@@ -1,11 +1,64 @@
 // Пример подключение шрифтов:
 
-// @font-face {
-//   font-family: 'Rubik';
-//   font-weight: 300;
-//   font-style: normal;
-//   src: local('Rubik-Light'),
-//     url('../fonts/Rubik-Light.woff2') format('woff2'),
-//     url('../fonts/Rubik-Light.woff') format('woff');
-//   font-display: swap;
-// }
+@font-face {
+  font-family: 'SFPro Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('SFProText-Regular'),
+    url('../fonts/SFProText-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SFPro Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('SFProText-Bold'),
+    url('../fonts/SFProText-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Cormorant-Bold'),
+    url('../fonts/Cormorant-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant SemiBold';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Cormorant-SemiBold'),
+    url('../fonts/Cormorant-SemiBold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant SemiBold Italic';
+  font-weight: 600;
+  font-style: italic;
+  src: local('Cormorant-SemiBoldItalic'),
+    url('../fonts/Cormorant-SemiBoldItalic.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond Bold Italic';
+  font-weight: 700;
+  font-style: italic;
+  src: local('Cormorant-Garamond-BoldItalic'),
+    url('../fonts/CormorantGaramond-BoldItalic.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Georgia Bold Italic';
+  font-weight: 700;
+  font-style: italic;
+  src: local('Georgia-BoldItalic'),
+    url('../fonts/georgia_bolditalic.woff2') format('woff2');
+  font-display: swap;
+}

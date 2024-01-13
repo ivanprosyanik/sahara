@@ -37,6 +37,10 @@
   }
 }
 
+html {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1450px;
   margin: 0 auto;
@@ -48,6 +52,9 @@ body {
   overflow: hidden;
   position: relative;
   height: 100vh;
+  font-family: 'SFPro Regular', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .wrapper {
@@ -76,9 +83,15 @@ section {
 
 .second-slide {
   transition: transform 1.5s ease-in-out;
-  position: relative;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  justify-content: center;
 
   &.active {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
     transform: translateX(-100%);
   }
 
@@ -131,11 +144,13 @@ section {
     &::before,
     &--second::before,
     &--third::before {
-      font-size: 300px;
+      font-family: 'Cormorant Bold', sans-serif;
+      font-weight: 700;
+      font-size: 400px;
       color: #fff;
       opacity: .5;
       position: absolute;
-      top: -150px;
+      top: -60%;
       right: 250px;
       z-index: -1;
     }
@@ -162,8 +177,9 @@ section {
   }
 
   &__title {
+    font-family: 'Cormorant Bold';
     font-size: 60px;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: capitalize;
     position: relative;
     margin-bottom: 15px;
@@ -205,6 +221,7 @@ section {
 .swiper {
   overflow: visible;
   position: relative;
+
   &-wrapper {
     display: flex;
     justify-content: start;
