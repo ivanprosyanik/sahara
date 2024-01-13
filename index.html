@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Sahara</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <nav class="header__nav">
+        <a href="#" class="header__logo logo">
+          <img class="logo__img" src="images/logo.svg" alt="Desert Secrets">
+        </a>
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="#">About</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Tours</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="container">
+
+        <div class="hero__subtitle">
+          AN <span>unforgettable</span> JOURNEY
+          THROUCH THE DESERT
+        </div>
+        <h1 class="title hero__title">sahara</h1>
+        <button class="hero__btn" type="button" id="btn-start">start</button>
+        <div class="hero__front" style="background-image: url(images/header-front.png);"></div>
+      </div>
+    </section>
+    <section class="second-slide slide" style="background-image: url(images/background.jpg);">
+      <div class="container">
+        <div class="swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <div class="slide__inner">
+                <img class="slide__img" src="images/camel.jpg" alt="Camel">
+                <div class="slide__offer">
+                  <h2 class="slide__title">day 1</h2>
+                  <div class="slide__text">
+                    <p>
+                      Our journey will start at dawn, we will get aquainted
+                      with magnificent camels and ride them until lunch.
+                      After lunch, we will rest in an oasis right in the middle
+                      of the desert. In the evening, master classes on the
+                      life of desert people await us.
+                    </p>
+                  </div>
+                  <button class="slide__btn icon icon--arrow-right" id="slideBtn" type="button">Next day</button>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="slide__inner slide__inner--second">
+                <img class="slide__img" src="images/camping.jpg" alt="Camel" width="500" height="500">
+                <div class="slide__offer">
+                  <h2 class="slide__title">day 2</h2>
+                  <div class="slide__text">
+                    <p>
+                      On the second day, we will prepare a delicious
+                      breakfast and continue our journey on quad bikes,
+                      visit significant and historical places of the desert,
+                      and in the evening we will set up camp and enjoy the
+                      magnificent starry sky.
+                    </p>
+                  </div>
+                  <button class="slide__btn icon icon--arrow-right" id="slideBtn" type="button">Next day</button>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide">
+              <div class="slide__inner slide__inner--third">
+                <img class="slide__img" src="images/camping.jpg" alt="Camel" width="500" height="500">
+                <div class="slide__offer">
+                  <h2 class="slide__title">day 3</h2>
+                  <div class="slide__text">
+                    <p>
+                      On the second day, we will prepare a delicious
+                      breakfast and continue our journey on quad bikes,
+                      visit significant and historical places of the desert,
+                      and in the evening we will set up camp and enjoy the
+                      magnificent starry sky.
+                    </p>
+                  </div>
+                  <button class="slide__btn icon icon--arrow-right" id="slideBtn" type="button">Next day</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

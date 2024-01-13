@@ -1,0 +1,33 @@
+.header {
+  position: absolute;
+  top: 30px;
+  left: 5px;
+  right: 5px;
+  z-index: 5;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+
+}
+
+@keyframes subtitleRemove {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
